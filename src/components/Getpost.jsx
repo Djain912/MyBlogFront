@@ -73,9 +73,9 @@ export default function Getpost() {
             onChange={handleFilterChange}
           >
             <option value="">Filter</option>
-            <option value="Learnings">Learnings</option>
-            <option value="Trade on Technicals">Trade on Technicals</option>
-            <option value="Trade on Fundamentals">Trade on Fundamentals</option>
+            <option value="Coding Problems">Coding Problems</option>
+          <option value="Tech Fact">Tech Fact</option>
+          <option value="Learnings">Learnings</option>
           </select>
           <button className="btn btn-primary join-item">Search</button>
         </div>

@@ -14,9 +14,9 @@ export default function Home() {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-neutral-content text-center">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+      <h1 className="mb-5 text-5xl font-bold">Hello Coders</h1>
       <p className="mb-5">
-        CodeItUp blog post website.
+        Documenting my coding experiences and solutions to real-world problems.
       </p>
       <Link onClick={() => window.scrollTo(0, 500)} className="btn btn-primary">Get Started</Link>
     </div>

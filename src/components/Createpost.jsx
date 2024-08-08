@@ -178,8 +178,8 @@ export default function CreatePost() {
           required
         >
           <option value="" disabled>Select category</option>
-          <option value="Trade on Technicals">Trade on Technicals</option>
-          <option value="Trade on Fundamentals">Trade on Fundamentals</option>
+          <option value="Coding Problems">Coding Problems</option>
+          <option value="Tech Fact">Tech Fact</option>
           <option value="Learnings">Learnings</option>
         </select>
         <ReactQuill
