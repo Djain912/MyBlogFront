@@ -6,7 +6,7 @@ import Loader from './Loader';
 export default function PostDetail() {
   const { postId } = useParams();
   const [post, setPost] = useState(null);
-  const [userRating, setUserRating] = useState(null);
+  const [userRating, setUserRating] = useState(0); // Set default rating to 0
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -29,7 +29,7 @@ export default function PostDetail() {
   }, [postId]);
 
   const handleRating = async (rating) => {
-    if (userRating) {
+    if (userRating > 0) { // Check if the user has already rated
       alert('You have already rated this post.');
       return;
     }
