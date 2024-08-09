@@ -11,7 +11,7 @@ export default function PostDetail() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`https://myblogbackend-fk9u.onrender.com/api/getposts/${postId}`);
+        const response = await fetch(`https://myblogbackend-fk9u.onrender.com/getposts/${postId}`);
         const data = await response.json();
         setPost(data);
 
@@ -35,7 +35,7 @@ export default function PostDetail() {
     }
 
     try {
-      const response = await fetch(`https://myblogbackend-fk9u.onrender.com/api/rate/${postId}`, {
+      const response = await fetch(`https://myblogbackend-fk9u.onrender.com/rate/${postId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
