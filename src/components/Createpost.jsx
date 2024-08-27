@@ -80,28 +80,29 @@ export default function CreatePost() {
       formData.append('file', postImg);
       formData.append('upload_preset', 'innovest');
       formData.append('cloud_name', 'djain');
-
+  
       const cloudinaryResponse = await fetch('https://api.cloudinary.com/v1_1/djain/image/upload', {
         method: 'POST',
         body: formData,
       });
-
+  
+      const cloudinaryData = await cloudinaryResponse.json();
+  
       if (!cloudinaryResponse.ok) {
-        const cloudinaryData = await cloudinaryResponse.json();
-        console.log(cloudinaryData);
+        console.error('Cloudinary upload failed:', cloudinaryData);
         alert('Error uploading image. Please try again later.');
-      } else {
-        const cloudinaryData = await cloudinaryResponse.json();
-        setImgUrl(cloudinaryData.url);
+        return;
       }
+  
+      setImgUrl(cloudinaryData.url || cloudinaryData.secure_url);
     } catch (error) {
-      console.error('Error sharing post:', error);
-      alert('Error sharing post. Please try again after some seconds.');
+      console.error('Error uploading image:', error);
+      alert('An error occurred while uploading the image. Please try again later.');
     } finally {
       setIsUploading(false);
     }
   };
-
+  
   const postUpload = async () => {
     try {
       setIsUploading(true);
@@ -118,31 +119,32 @@ export default function CreatePost() {
           image: imgUrl,
         }),
       });
-
+  
+      const responseData = await postDataResponse.json();
+  
       if (!postDataResponse.ok) {
-        const errorData = await postDataResponse.json();
-        console.error('Post failed:', errorData);
-        alert(errorData.message);
-      } else {
-        const responseData = await postDataResponse.json();
-        console.log(responseData);
-        alert('Post Shared Successfully');
-
-        // Send notification to all subscribed users
-        await fetch('https://myblogbackend-fk9u.onrender.com/sendmail', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            title,
-            subtitle,
-            description,
-            category,
-            image: imgUrl,
-          }),
-        });
+        console.error('Post creation failed:', responseData);
+        alert('Error creating post. Please try again later.');
+        return;
       }
+  
+      console.log('Post created successfully:', responseData);
+      alert('Post Shared Successfully');
+  
+      // Send notification to all subscribed users
+      await fetch('https://myblogbackend-fk9u.onrender.com/sendmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title,
+          subtitle,
+          description,
+          category,
+          image: imgUrl,
+        }),
+      });
     } catch (error) {
       console.error('Error sharing post:', error);
       alert('Error sharing post. Please try again later.');
@@ -150,6 +152,7 @@ export default function CreatePost() {
       setIsUploading(false);
     }
   };
+  
 
   return (
     <div className="container mx-auto p-4">
