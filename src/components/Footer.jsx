@@ -51,7 +51,6 @@ export default function Footer() {
       <nav>
         <h6 className="footer-title">Legal</h6>
         <Link to="/tandc" className="link link-hover">Terms of use</Link> 
-        <a className="link link-hover">Privacy policy</a>
       </nav>
       <form onSubmit={handleSubscribe}>
         <h6 className="footer-title">Newsletter</h6>
