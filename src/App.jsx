@@ -18,6 +18,7 @@ import Subscribe from './components/Subscribe';
 import LoginPage from './components/LoginPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import TermsAndConditions from './components/TermsAndConditions';
+import Error from './components/Error';
 
 export default function App() {
   return (
@@ -44,6 +45,8 @@ export default function App() {
           <Route path="/adminposts" element={<ProtectedRoute element={<AdminPostPage />} />} />
           <Route path="/editpost/:id" element={<ProtectedRoute element={<EditPostPage />} />} />
           <Route path="/admincontacts" element={<ProtectedRoute element={<AdminContacts />} />} />
+      
+          <Route path='/*' element={<Error />} />
         </Routes>
       
       </div>
