@@ -29,7 +29,7 @@ const SubscribePage = () => {
         setEmail('');
       } else {
         setAlertType('error');
-        setMessage('Subscription failed. Please try again.');
+        setMessage('Email already subscribed.');
       }
     } catch (error) {
       console.error('Error:', error);
