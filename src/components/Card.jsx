@@ -7,8 +7,8 @@ const Card = ({ title, subtitle, imgSrc, link }) => {
         <img src={imgSrc} alt={title} className="w-full h-48 object-cover" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-lg font-bold truncate">{title}</h2>
-        <p className="text-sm text-gray-600 truncate">{subtitle}</p>
+        <h2 className="card-title text-white text-lg font-bold truncate">{title}</h2>
+        <p className="text-sm text-white truncate">{subtitle}</p>
         <a href={link} className="btn btn-primary mt-4">Read More</a>
       </div>
     </div>
