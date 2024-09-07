@@ -58,7 +58,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-base-200 p-4">
       <div className="w-full max-w-md bg-base-100 p-6 rounded-lg shadow-2xl">
-        <h2 className="text-2xl font-bold mb-6 text-center">Contact TradeSavvy</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
         <form className="space-y-4" onSubmit={onContact}>
           <div>
             <label className="block text-sm font-medium mb-1">Name</label>
