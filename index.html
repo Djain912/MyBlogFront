@@ -1,33 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href="https://codeitupblogs.netlify.app/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="f8W757HP-Dg17T6Iuo3cBYMCTZTK90_leRoZcb1v8XU" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="CodeItUp - Discover coding experiences, tutorials, and solutions to real-world problems in web and software development." />
-    <meta name="keywords" content="CodeItUp, coding blog, software development, coding tutorials, programming, problem-solving, web development, coding solutions, developer blog" />
-    <meta name="author" content="Darshan Jain" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href="https://codeitupblogs.netlify.app/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="f8W757HP-Dg17T6Iuo3cBYMCTZTK90_leRoZcb1v8XU" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
-    <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="CodeItUp - My Coding Journey and Solutions" />
-    <meta property="og:description" content="Explore tutorials, coding solutions, and problem-solving approaches in software and web development." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://codeitupblogs.netlify.app/" />
-    <meta property="og:image" content="https://codeitupblogs.netlify.app/og-image.png" /> <!-- Add an image for social previews -->
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="CodeItUp - Discover coding experiences, tutorials, and solutions to real-world problems in web and software development." />
+  <meta name="keywords"
+    content="CodeItUp, coding blog, software development, coding tutorials, programming, problem-solving, web development, coding solutions, developer blog" />
+  <meta name="author" content="Darshan Jain" />
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CodeItUp - My Coding Journey and Solutions" />
-    <meta name="twitter:description" content="Follow my coding journey with tutorials and problem-solving insights on software development." />
-    <meta name="twitter:image" content="https://codeitupblogs.netlify.app/twitter-image.png" /> <!-- Twitter image for preview -->
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="CodeItUp - My Coding Journey and Solutions" />
+  <meta property="og:description"
+    content="Explore tutorials, coding solutions, and problem-solving approaches in software and web development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://codeitupblogs.netlify.app/" />
+  <meta property="og:image" content="https://codeitupblogs.netlify.app/og-image.png" />
+  <!-- Add an image for social previews -->
 
-    <!-- Structured Data (JSON-LD) for Search Engines -->
-    <script type="application/ld+json">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CodeItUp - My Coding Journey and Solutions" />
+  <meta name="twitter:description"
+    content="Follow my coding journey with tutorials and problem-solving insights on software development." />
+  <meta name="twitter:image" content="https://codeitupblogs.netlify.app/twitter-image.png" />
+  <!-- Twitter image for preview -->
+
+  <!-- Structured Data (JSON-LD) for Search Engines -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -41,50 +48,54 @@
     }
     </script>
 
-    <title>CodeItUp - My Coding Journey & Development Solutions</title>
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to CodeItUp - My Coding Journey</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    
-    <main>
-      <div id="root"></div>
-    </main>
+  <title>CodeItUp - My Coding Journey & Development Solutions</title>
+</head>
 
-    <footer>
-      <p>&copy; 2024 Darshan Jain. All Rights Reserved.</p>
-    </footer>
+<body>
+  <header>
+    <h1>Welcome to CodeItUp - My Coding Journey</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- 404 Custom Page -->
-    <script type="module">
-      window.addEventListener('error', function () {
-        document.body.innerHTML = '<h1>404 - Page Not Found</h1><p>Sorry, the page you are looking for does not exist. <a href="/">Go back home</a>.</p>';
-      });
-    </script>
+  <main>
+    <div id="root"></div>
+  </main>
 
-    <!-- Render-blocking scripts optimized for async -->
-    <script async type="module" src="/src/main.jsx"></script>
+  <footer>
+    <p>&copy; 2024 Darshan Jain. All Rights Reserved.</p>
+  </footer>
 
-    <!-- Google Analytics Script (replace 'UA-XXXXX-Y' with your ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-XXXXX-Y');
-    </script>
+  <!-- 404 Custom Page -->
+  <script type="module">
+    window.addEventListener('error', function () {
+      document.body.innerHTML = '<h1>404 - Page Not Found</h1><p>Sorry, the page you are looking for does not exist. <a href="/">Go back home</a>.</p>';
+    });
+  </script>
 
-    <!-- AddThis Social Media Integration (optional) -->
-    <script async defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-XXXXXXX"></script>
+  <!-- Render-blocking scripts optimized for async -->
+  <script async type="module" src="/src/main.jsx"></script>
 
-  </body>
+  <!-- Google Analytics Script (replace 'UA-XXXXX-Y' with your ID) -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7GSM81SMF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q7GSM81SMF');
+  </script>
+
+  <!-- AddThis Social Media Integration (optional) -->
+  <script async defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-XXXXXXX"></script>
+
+</body>
+
 </html>
