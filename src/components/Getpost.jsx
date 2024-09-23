@@ -12,7 +12,7 @@ export default function Getpost() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("https://myblogbackend-fk9u.onrender.com/getposts");
+        const response = await fetch("https://myblogback-0tsr72u7.b4a.run/getposts");
         const data = await response.json();
         setPosts(data);
       } catch (error) {
