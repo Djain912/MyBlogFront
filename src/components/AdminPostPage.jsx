@@ -38,7 +38,7 @@ const AdminPostPage = () => {
     if (window.confirm('Are you sure you want to delete this post?')) {
       setIsDeleting(true);
       try {
-        const response = await fetch('https://myblogback-0tsr72u7.b4a.run/delpost/${id}`, {
+        const response = await fetch(`https://myblogback-0tsr72u7.b4a.run/delpost/${id}`, {
           method: 'DELETE',
         });
 
