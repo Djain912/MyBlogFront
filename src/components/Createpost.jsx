@@ -106,7 +106,7 @@ export default function CreatePost() {
   const postUpload = async () => {
     try {
       setIsUploading(true);
-      const postDataResponse = await fetch('https://myblogbackend-fk9u.onrender.com/createpost', {
+      const postDataResponse = await fetch('https://myblogback-0tsr72u7.b4a.run/createpost', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ export default function CreatePost() {
       alert('Post Shared Successfully');
   
       // Send notification to all subscribed users
-      await fetch('https://myblogbackend-fk9u.onrender.com/sendmail', {
+      await fetch('https://myblogback-0tsr72u7.b4a.run/sendmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
