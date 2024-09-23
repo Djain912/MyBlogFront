@@ -10,7 +10,7 @@ export default function Carddisplay() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch('https://myblogbackend-fk9u.onrender.com/getrecentposts');
+        const response = await fetch('https://myblogback-0tsr72u7.b4a.run/getrecentposts');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
