@@ -11,7 +11,7 @@ const AdminContacts = () => {
     }
     const fetchContacts = async () => {
       try {
-        const response = await fetch('https://myblogbackend-fk9u.onrender.com/getcontacts');
+        const response = await fetch('https://myblogback-0tsr72u7.b4a.run/getcontacts');
         const data = await response.json();
         setContacts(data);
       } catch (error) {
@@ -26,7 +26,7 @@ const AdminContacts = () => {
     if (window.confirm('Are you sure you want to delete this contact?')) {
       setIsDeleting(true);
       try {
-        const response = await fetch(`https://myblogbackend-fk9u.onrender.com/delcontact/${id}`, {
+        const response = await fetch(`https://myblogback-0tsr72u7.b4a.run/delcontact/${id}`, {
           method: 'DELETE',
         });
 
