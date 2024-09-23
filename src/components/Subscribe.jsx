@@ -15,7 +15,7 @@ const SubscribePage = () => {
     setAlertType('');
 
     try {
-      const response = await fetch('https://myblogbackend-fk9u.onrender.com/subscribe', {
+      const response = await fetch('https://myblogback-0tsr72u7.b4a.run/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
