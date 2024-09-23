@@ -12,7 +12,7 @@ const LoginPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://myblogbackend-fk9u.onrender.com/login', {
+      const response = await fetch('https://myblogback-0tsr72u7.b4a.run/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
