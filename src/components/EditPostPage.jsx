@@ -79,7 +79,7 @@ const EditPostPage = () => {
     const fetchPost = async () => {
       try {
         const response = await fetch(
-          `https://myblogbackend-fk9u.onrender.com/getposts/${id}`
+          `https://myblogback-0tsr72u7.b4a.run/getposts/${id}`
         );
         const data = await response.json();
         console.log("Fetched post data:", data);
@@ -153,7 +153,7 @@ const EditPostPage = () => {
 
     try {
       const response = await fetch(
-        `https://myblogbackend-fk9u.onrender.com/updatepost/${id}`,
+        `https://myblogback-0tsr72u7.b4a.run/updatepost/${id}`,
         {
           method: "PUT",
           headers: {
