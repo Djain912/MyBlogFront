@@ -28,7 +28,7 @@ const Contact = () => {
     const { name, email, phone, message } = contact;
 
     try {
-      const response = await fetch('https://myblogbackend-fk9u.onrender.com/contact', {
+      const response = await fetch('https://myblogback-0tsr72u7.b4a.run/contact', {
         method: 'POST',
         headers: {
           "Content-Type": 'application/json'
